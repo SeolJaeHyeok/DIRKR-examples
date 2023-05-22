@@ -1,4 +1,3 @@
-import './globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +14,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body  className={inter.className}>  <aside>
+        <ul style={{listStyle: 'none', padding: 0}}>
+          <li>Controlled vs Uncontolled
+            <ul>
+              <a href={'/controlled-uncontrolled/controlled'}><li >Controlled</li></a>
+              <a href={'/controlled-uncontrolled/uncontrolled'}><li>Uncontrolled</li></a>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{children}</div>
+      </body>
     </html>
   )
 }
