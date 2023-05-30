@@ -40,6 +40,17 @@ export default function RootLayout({
                 </a>
               </ul>
             </li>
+            <li>
+              HOC
+              <ul>
+                <a href={"/HOC/basic"}>
+                  <li>Basic</li>
+                </a>
+                <a href={"/HOC/advanced"}>
+                  <li>Advanced</li>
+                </a>
+              </ul>
+            </li>
           </ul>
         </aside>
         <div
