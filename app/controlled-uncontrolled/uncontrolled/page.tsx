@@ -3,13 +3,9 @@ import React, { useState, useRef } from "react";
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
-  const handleClickOutside = (event) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
+
 
   const handleOpenModal = () => {
     setIsOpen(true);

@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React from "react";
 
 const App = () => {
   return (
@@ -12,14 +12,12 @@ const App = () => {
 };
 
 const Parent = (props) => {
-  let btn = "GeeksforGeeks";
+  let btn = "Milkboy2564";
   return (
     <div>
       {React.Children.map(props.children, (child) => {
+        // 세 번째 인자가 null인 경우 어떠한 children도 가지지 않음.
         return React.cloneElement(child, { btn }, null);
-        // third parameter is null
-        // Because we are not adding
-        // any children
       })}
     </div>
   );
