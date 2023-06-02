@@ -51,6 +51,17 @@ export default function RootLayout({
                 </a>
               </ul>
             </li>
+            <li>
+              Context
+              <ul>
+                <a href={"/context/my-solution"}>
+                  <li>My Solution</li>
+                </a>
+                <a href={"/context/docs-solution"}>
+                  <li>Docs Solution</li>
+                </a>
+              </ul>
+            </li>
           </ul>
         </aside>
         <div
