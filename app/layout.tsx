@@ -15,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {" "}
         <aside>
           <ul style={{ listStyle: "none", padding: 0 }}>
             <li>
@@ -59,6 +58,14 @@ export default function RootLayout({
                 </a>
                 <a href={"/context/docs-solution"}>
                   <li>Docs Solution</li>
+                </a>
+              </ul>
+            </li>
+            <li>
+              React Portal
+              <ul>
+                <a href={"/react-portal"}>
+                  <li>React Portal</li>
                 </a>
               </ul>
             </li>
