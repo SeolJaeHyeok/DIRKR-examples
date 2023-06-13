@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import { useState } from "react";
-import PortalModal from "./components/PortalModal";
-import NoPortalModal from "./components/NoPortalModal";
+import { useState } from 'react'
+import PortalModal from './components/PortalModal'
+import NoPortalModal from './components/NoPortalModal'
 
 export default function Page() {
   const [modalStatus, setModalStatus] = useState({
@@ -11,21 +11,28 @@ export default function Page() {
     },
     noPortal: {
       isOpen: false,
-    }
+    },
   })
 
   const handleModalClick = (type: string) => {
-    console.log(type)
     setModalStatus((prev: typeof modalStatus) => ({
       ...prev,
       [type]: {
         isOpen: !prev[type].isOpen,
       },
-    }));
+    }))
   }
 
-  return <div style={{display: 'flex', marginLeft: '20px'}}>
-    <NoPortalModal isOpen={modalStatus.noPortal.isOpen} onModalClick={handleModalClick}/>
-    <PortalModal isOpen={modalStatus.portal.isOpen} onModalClick={handleModalClick}/>
-  </div>
+  return (
+    <div style={{ display: 'flex', marginLeft: '20px' }}>
+      <NoPortalModal
+        isOpen={modalStatus.noPortal.isOpen}
+        onModalClick={handleModalClick}
+      />
+      <PortalModal
+        isOpen={modalStatus.portal.isOpen}
+        onModalClick={handleModalClick}
+      />
+    </div>
+  )
 }

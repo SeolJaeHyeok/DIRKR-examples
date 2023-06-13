@@ -1,15 +1,15 @@
-"use client"
+'use client'
 
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useState } from 'react'
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const handleSubmit = (event: any) => {
-    event.preventDefault();
+    event.preventDefault()
     // 폼 제출에 따른 로직 추가
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -31,8 +31,8 @@ const LoginForm = () => {
 
       <button type="submit">Submit</button>
     </form>
-  );
-};
+  )
+}
 
 export default function Page() {
   return <LoginForm />

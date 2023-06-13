@@ -1,19 +1,17 @@
-"use client"
-import React, { useState, useRef } from "react";
+'use client'
+import React, { useState, useRef } from 'react'
 
 const Modal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useRef<HTMLDivElement>(null);
-
-
+  const [isOpen, setIsOpen] = useState(false)
+  const modalRef = useRef<HTMLDivElement>(null)
 
   const handleOpenModal = () => {
-    setIsOpen(true);
-  };
+    setIsOpen(true)
+  }
 
   const handleCloseModal = () => {
-    setIsOpen(false);
-  };
+    setIsOpen(false)
+  }
 
   return (
     <div>
@@ -29,12 +27,9 @@ const Modal = () => {
         </div>
       )}
     </div>
-  );
-};
-
-
+  )
+}
 
 export default function Page() {
-  
   return <Modal />
 }
