@@ -69,6 +69,14 @@ export default function RootLayout({
                 </a>
               </ul>
             </li>
+            <li>
+              Error Boundary
+              <ul>
+                <a href={'/error-boundary'}>
+                  <li>Error Boundary</li>
+                </a>
+              </ul>
+            </li>
           </ul>
         </aside>
         <div
