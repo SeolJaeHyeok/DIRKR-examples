@@ -1,3 +1,6 @@
+'use client'
+
+import ErrorBoundary from '@/components/ErrorBoundary/error-boundary'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -86,7 +89,9 @@ export default function RootLayout({
             alignItems: 'center',
           }}
         >
-          {children}
+          <ErrorBoundary fallback={<h1>최상위에서 Error 발생</h1>}>
+            {children}
+          </ErrorBoundary>
         </div>
       </body>
     </html>
