@@ -1,9 +1,8 @@
 'use client'
 
-import { Component, ErrorInfo, ReactNode, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ComponentWithError from './components/ComponentWithError'
-import { GetStaticProps } from 'next'
-import ErrorBoundary from '@/components/ErrorBoundary/error-boundary'
+import ErrorBoundary from '@/app/error-boundary/components/error-boundary'
 import ComponentWithNoError from './components/ComponentWithNoError'
 
 export default function Page0() {

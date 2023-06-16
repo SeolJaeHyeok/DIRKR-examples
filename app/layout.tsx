@@ -1,6 +1,6 @@
 'use client'
 
-import ErrorBoundary from '@/components/ErrorBoundary/error-boundary'
+import ErrorBoundary from '@/app/error-boundary/components/error-boundary'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
