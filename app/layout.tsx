@@ -1,4 +1,5 @@
 'use client'
+import '../styles/styles.css'
 
 import ErrorBoundary from '@/app/error-boundary/components/error-boundary'
 import { Inter } from 'next/font/google'
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <aside>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
+          <ul className="sidebar" style={{ listStyle: 'none', padding: 0 }}>
             <li>
               Controlled vs Uncontolled
               <ul>
@@ -77,6 +78,14 @@ export default function RootLayout({
               <ul>
                 <a href={'/error-boundary'}>
                   <li>Error Boundary</li>
+                </a>
+              </ul>
+            </li>
+            <li>
+              Compound Components
+              <ul>
+                <a href={'/compound-components'}>
+                  <li>Compound Components</li>
                 </a>
               </ul>
             </li>
