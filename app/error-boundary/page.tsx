@@ -7,13 +7,17 @@ import ComponentWithNoError from './components/ComponentWithNoError'
 
 export default function Page0() {
   const [state, setState] = useState({})
+
+  const handleFetch = async () => {
+    const res = await fetch('https://api.github.com/repos/vercel/next.js')
+    const repo = await res.json()
+    setState(repo)
+  }
+
   useEffect(() => {
-    ;(async () => {
-      const res = await fetch('https://api.github.com/repos/vercel/next.js')
-      const repo = await res.json()
-      setState(repo)
-    })()
+    handleFetch()
   }, [])
+
   return (
     <ErrorBoundary fallback={<h1>Page에서 발생한 Runtime Error</h1>}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
